@@ -1,19 +1,61 @@
+---
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+---
+
 ## Atualizações nos eixos de investigação
 
-Os eixos de investigação foram elaborados procurando dividir as conclusões de pesquisa em subtópicos diretamente relacionados à elaboração de alguma política pública, reforma legislativa ou a possíveis impactos do novo CPC. A investigação em cada eixo deve ser vista como uma pequena pesquisa com conclusões e metodologias próprias.
+Os eixos de investigação foram montados para dividir as conclusões de pesquisa em subtópicos diretamente relacionados à elaboração de alguma política pública, reforma legislativa ou a possíveis impactos do novo CPC. A investigação em cada eixo deve ser vista como uma pequena pesquisa com conclusões e metodologias próprias.
 
-Na segunda fase, fizemos um corte de escopo nos estudos para permitir a entrega do relatório final dentro do prazo. Após reunião de alinhamento sobre o produto inicial, os eixos de investigação foram ordenados de acordo com uma lista de prioridades enviada pelo DPJ.
+Após reunião de alinhamento sobre o produto inicial, os eixos de investigação foram ordenados de acordo com uma lista de prioridades enviada pelo DPJ. Na segunda fase, fizemos um corte de escopo nos estudos para permitir a entrega do relatório final dentro do prazo.
 
-Nas próximas subseções apresentamos o andamento das atividades para cada eixo de investigação, já ordenados por prioridade. Os eixos levantados no produto 1 e suspensos no produto 2 serão revisitados em pesquisas futuras da ABJ, conforme disponibilidade e/ou financiamento.
+Nas próximas subseções apresentamos o andamento das atividades em cada eixo de investigação, ordenados pela prioridade. Eixos levantados no produto 1 e suspensos no produto 2 serão revisitados em pesquisas futuras da ABJ, conforme disponibilidade e/ou financiamento.
 
 ### Canais de composição extrajudicial
 
+O tema de maior interesse do DPJ foi também o mais discutido nos grupos focais. A explicação é coerente: existe um consenso de que a melhor forma de reduzir o estoque dos tribunais é fazer com que menos litígios apareçam no futuro, e a melhor forma de fazer isso é através da composição extrajudicial. Vamos explicar através de uma analogia.
+
+Imagine uma torneira. A água nos canos representa os conflitos e a água que sai na torneira representa os litígios. Nosso objetivo é reduzir ao máximo o volume de água que sai da torneira. Existem duas formas de fazer isso: i) mexer no registro para reduzir o volume de água e ii) apertar a torneira. 
+
+As duas soluções são difíceis colocar em prática. No primeiro caso precisamos reduzir os conflitos e, portanto, o cometimento de ilícitos. Isso exige mudanças profundas nos processos internos das empresas, envolvendo soluções muito caras ou até desconhecidas. No segundo caso, existem problemas principiológicos, pois reduzir a porta de entrada dos consumidores nos tribunais é o mesmo que limitar o acesso à justiça.
+
+Mas existe uma terceira solução: fazer pequenos furos nos canos. Na prática, isso significa resolver os conflitos sem precisar o judiciário, utilizando mecanismos de composição extrajudicial. Essa solução é interessante por ser escalável e descentralizada (qualquer pessoa ou empresa pode criar novos canais de composição extrajudicial).
+
+No entanto, é difícil estabelecer relações causais entre incentivo à composição extrajudicial e o volume de litígios. Isso acontece por um problema de *link* entre os dados: as bases do judiciário não se comunicam diretamente com bases de reclamações e problemas de consumo. 
+
+Pelo exposto, daremos um foco especial à análise dos meios de composição extrajudicial. No entanto, adiantamos que as conclusões terão limitações significativas e precisam ser aproveitadas com cuidado.
+
 ### Estratégias de composição amigável
+
+A conciliação é um tema amplamente discutido no judiciário e apareceu como prioridade do DPJ. No entanto, os grupos focais revelaram que o interesse não é tão grande para ações envolvendo direito do consumidor. Os especialistas acreditam que a proporção de processos com composições amigáveis está próxima do máximo alcançável; nos casos restantes, alguma das partes realmente não tem interesse no acordo. Isso significa que criar mais formas de incentivar o acordo não têm resultado prático.
+
+Sempre que possível, utilizaremos os dados disponibilizados pelos tribunais para realizar análises envolvendo acordos. Procuraremos entender os perfis de processos mais suscetíveis a acordos, comparando tempos, valores e distribuição geográfica. No entanto, não será possível realizar relações causais (por exemplo, não testaremos afirmações como "incentivar acordos aumenta a probabilidade de acordo").
 
 ### Motivações para o cometimento de ilícitos
 
-### Incidentes de demandas repetitivas
+Esse é um tema de grande interesse pelo DPJ e dividiu opiniões nos grupos focais. O cometimento de ilícitos é o insumo dos conflitos entre empresa e consumidor. Na analogia da torneira, entender as motivações para o cometimento de ilícitos é o mesmo que estudar o encanamento por trás da torneira. Infelizmente, não é possível quebrar a parede para analisar o encanamento -- não podemos investigar nem relatar publicamente as políticas internas dos maiores litigantes em ações consumeristas. 
+
+As análises para o tema ficariam apenas no plano teórico e os modelos finais poderiam ser aplicadas no mundo real somente após a coleta de novos dados. Por isso, resolvemos deixar as análises em segundo plano, possivelmente em pesquisas futuras.
+
+### Incidente de demandas repetitivas
+
+O IRDR era um tema potencialmente interessante no início da pesquisa. Estudar sua aplicação é uma forma de avaliar os impactos do novo CPC no direito do consumidor. Soluções envolvendo o IRDR também poderiam ajudar a decidir processos em bloco sem reduzir a segurança jurídica, o aumenta significativamente a eficiência dos tribunais.
+
+Infelizmente, em todas as entrevistas o tema ficou em segundo plano. É grande a descrença em aplicações práticas do IRDR. E é pequena a fatia dos problemas do consumidor que ele ataca. Para ser efetivo, o IRDR precisaria de uma tecnologia de identificação e agrupamento de processos que ainda não existe em nenhum tribunal. Além disso, existem poucos casos disponíveis para análise.
+
+Concluímos que o IRDR precisa de tempo para maturar e tornar-se passivo de análise quantitativa. Por isso, o eixo de investigação foi descartado na presente pesquisa.
 
 ### Incentivos para litigar
 
+Apesar de estar na penúltima posição na lista de prioridades do DPJ, esse foi um dos temas mais discutidos nos grupos focais. Juízes e empresários têm diferentes hipóteses sobre o valor da taxa de conversão de conflitos em litígios relacionados ao consumidor, o que leva a diferentes percepções sobre a influência de fenômenos como a gratuidade judiciária, as custas processuais nos JECs e a indústria do dano moral no volume de ações.
+
+O tema ficará em segundo plano mas aparecerá no relatório final a partir de uma exposição teórica dos incentivos para litigar. A mensuração da taxa de conversão de conflitos em litígios é complexa e será objeto de pesquisas futuras.
+
 ### Otimização da fila de trabalho
+
+A ideia de otimizar filas de trabalho já nasceu problemática. O tema surgiu de dentro do Laboratório de Jurimetria e baseia-se na suposição de que o a ordenação de tarefas dentro de uma vara é ineficiente. Um algoritmo de otimização poderia ser usado para agrupar processos similares ou tarefas repetidas dentro de processos distintos, eliminando retrabalho da vara.
+
+Ao entrevistar juízas do TJSP, observamos que o tribunal já possui diversos modelos de documentos e ritos bem definidos. Novos padrões para fluxo de trabalho das varas seria útil apenas em comarcas com menor volume processual. A solução também apresenta dificuldades de implementação, pois precisa ser integrado aos sistemas existentes e poderiam exigir treinamento. 
+
+Ante o exposto, decidimos deixar esse tema para pesquisas futuras.

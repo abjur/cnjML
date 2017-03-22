@@ -1,0 +1,11 @@
+---
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+---
+
+## Outras bases de dados
+
+### SINDEC
+
+### Consumidor.gov

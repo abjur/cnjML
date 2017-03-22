@@ -1,0 +1,15 @@
+---
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+---
+
+# Descrição dos dados disponíveis até o momento
+
+## Bases de dados dos tribunais
+
+### Tribunal de Justiça de São Paulo
+
+### Tribunal de Justiça do Rio Grande do Sul
+
+### Tribunal de Justiça do Rio de Janeiro

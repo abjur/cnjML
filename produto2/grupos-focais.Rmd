@@ -1,0 +1,114 @@
+---
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+---
+
+## Grupos focais
+
+Os grupos focais têm o objetivo de alinhar hipóteses de pesquisa e dividir experiências. Um grupo focal geralmente tem como retorno a visão de um tipo de profissional ou de uma entidade sobre determinado tema, que pode ou não ser concordante com outros grupos focais.
+
+Com o intuito de obter opiniões plurais e variadas, a ABJ elencou para entrevistas diferentes profissionais, como juízes e advogados, bem como diferentes entidades, como empresas do setor de varejo, telefonia e bancário, a Secretaria Nacional do Consumidor (SENACON) e agências reguladoras.
+
+Realizamos ao todo cinco grupos focais: 
+
+i. Equipe de advogados especializados no novo CPC.
+i. Secretaria Nacional do Consumidor (SENACON).
+i. Juízas do TJSP.
+i. Diretoria jurídica do Grupo Pão de Açúcar.
+i. Diretoria jurídica do Itaú-Unibanco.
+
+O primeiro grupo focal contou com a presença dos advogados Rodrigo Araújo e João Braz e teve como principais resultados as anotações abaixo.
+
+1. A obrigatoriedade da realização de audiências de conciliação prévias (CPC/2015, art. 334, Caput) pode influenciar de forma negativa no andamento dos processos.
+1. O novo CPC estabeleceu que os Tribunais deverão criar centros judiciários de solução consensual de conflitos (CPC/2015, art. 165, Caput), o que pode ter efeito positivo sobre o volume de ações do consumidor.
+1. Os IRDR só terão efeito sobre matérias de direito e não em matérias de fato. Além disso, supõe-se que a maior parte dos processos envolvendo direito do consumidor envolvem prioritariamente questões de fato. Assim, espera-se que o IRDR não tenha efeito positivo para resolução de demandas do consumidor.
+
+**SENACON**. O segundo grupo focal contou com a presença de Armando Rovai, presidente da SENACON.
+
+1. O superendividamento é um problema corrente nos canais do portal Consumidor.gov. É possível afirmar que o consumidor pode não é o único responsável pelo endividamento, uma vez que este pode ser mitigado por bancos e fornecedores de cartões de crédito que possuam informações aprofundadas do consumidor.
+1. Planos de saúde. Considerando o maior acesso a planos de saúde pela população em geral e o aumento recente de ações de erro médico, uma possível hipótese é que as seguradoras não estão preparadas para atender de forma adequada a demanda dos novos clientes. Isso indica a necessidade de criação de programas para reunir essas instituições e debater sobre as causas raiz dos processos judiciais.
+1. A SENACON tem o interesse de medir o impacto das políticas da própria entidade. A metodologia usada para mensuração desses impactos poderiam ser extrapoladas para outras entidades.
+
+O terceiro grupo focal contou com a presença de Maria Rita Rebello e Ana Rita Nery, ambas juízas assessoras da corregedoria.
+
+1. Sobre ações coletivas
+    - Ações coletivas são uma solução melhor que IRDR, pois o IRDR ainda mantém a necessidade de sentenças individuais.
+    - Como implementar ações coletivas de forma mais sistemática: criar um dashboard para o Ministério Público (MP) que monitore dados dos canais Procon, Reclame Aqui, Consumidor.gov e Judiciário e identifique movimentações anômalas de grupos de processos em determinados lugares ou tempos, para indicar a necessidade de criar ações coletivas.
+    - Precisamos entrevistar o MP para falar sobre ações coletivas! Eles têm um núcleo do consumidor lá.
+2. Sobre conciliação
+    - A conciliação não é uma forma de melhorar o judiciário em ações consumeristas.
+    - A conciliação faz mais sentido quando a relação é entre pessoa/pessoa. Quando a relação é entre pessoa/empresa, a pessoa só entra com a ação se realmente não tem mais como resolver a situação de outra forma. A probabilidade de aceite de acordo dado que o processo envolve relação de consumo é baixa.
+    - A obrigatoriedade da conciliação é inconstitucional.
+    - Incentivar fortemente a conciliação pode ser visto como mais uma forma de incentivar a empresa a cometer ilícitos.
+3. Sobre fila de trabalho nos processos
+    - Não aumenta a velocidade dos processos no TJSP, pois o tribunal já possui diversos modelos de documentos e ritos bem definidos. O novo CPC também ajuda nesse sentido.
+    - O foco deve ser em métodos para identificação de boas práticas na administração de varas e bases de conhecimento internas para facilitar comunicação (e.g. informar sobre um advogado que frauda documentos, criar fluxos de atuação do juiz em certos tipos de casos etc.)
+    - Em comarcas menores e tribunais com sistemas mais precários, faz sentido implementar técnicas de filas de trabalho, pois os juízes desses lugares não administram a vara de forma eficaz.
+4. Sobre incentivos para litigar
+    - Não existem tantos incentivos para litigar por parte das pessoas.
+    - É pequeno número de pessoas que entra com ações, comparado com o volume de conflitos que não são resolvidos extrajudicialmente.
+    - Uma taxa baixa de conversão de conflitos em litígios é benéfica para a empresa.
+5. Sobre incentivos das empresas para cometerem ilícitos
+    - É o grande gargalo na questão dos incentivos para litigar.
+    - Uma possível solução é a implementação de *punitive damages*.
+    - As sanções e multas de agências reguladoras podem funcinar como substitutas para *punitive damages*, mas as agências não têm interesse em aplicá-las.
+    - O ideal seria vincular uma estratégia de sanções ao Procon.
+6. Mecanismos de composição extrajudicial
+    - Ferramentas como Reclame Aqui e Consumidor.gov são indispensáveis.
+    - O SAC não é um bom mecanismo pois as empresas não têm interesse que elas sejam eficazes.
+
+O quarto grupo focal contou com a presença da diretoria de contencioso cível do Itaú-Unibanco.
+
+1. Sobre ações coletivas e IRDR
+    - O IRDR não vai funcionar pois os juízes simplesmente vão aplicar o que querem e não seguir as "regras" de demandas repetitivas.
+    - Não houve comentários sobre ações coletivas
+1. Sobre conciliação
+    - Composição extrajudicial é mais eficiente do que acordo dentro do processo.
+    - Aumentar incentivos para o acordo dentro do judiciário não aumenta a proporção de acordos.
+1. Sobre incentivos para litigar
+    - Existe incentivo para litigar. Quando a pessoa se sente injustiçada, entra no judiciário mesmo com propostas de composição extrajudicial.
+    - Existem incentivos macroeconômicos para litigar. Crise gera inadimplência, que gera aversão a cobranças, que gera ações para negar relação contratual (e.g. tarifas bancárias).
+    - Existe indústria do dano moral, mas só em alguns lugares e para alguns juízes. O efeito é pontual.
+    - Gratuidade judiciária deveria ser baseada em critérios objetivos.
+    - JEC também tem o mesmo problema. As pessoas têm incentivo a litigar e com os maiores valores possíveis.
+1. Incentivos das empresas para cometerem ilícitos
+    - Existem empresas que maximizam lucro colocando na conta a perda esperada por indenização.
+    - Esse tipo de atitude é mais comum em empresas menores, que ainda não implantaram governança corporativa.
+    - Atualmente os grandes bancos não fazem isso e tentam evitar os conflitos ao máximo.
+1. Mecanismos de composição extrajudicial
+    - Extremamente importante e subutilizado.
+    - Há necessidade de incentivar as pessoas a procurarem mais esses meios.
+    - Na maioria dos casos as pessoas não procuram meios extrajudiciais para solução de conflitos
+    - Isso também está ligado à cultura do litígio na advocacia. Advogados (ruins) têm de tudo para cooptarem clientes e entrarem com ações de consumo. A concentração de ações esteja em escritórios pequenos ou advogados que atuam sozinhos. Isso é influência de i) excesso de advogados no país e ii) faculdades ruins.
+    - A OAB não tem interesse em reduzir litigiosidade, por isso ela foca em temas como conciliação e IRDR e acesso à justiça, e fogem de alternativas extrajudiciais ou de mudança de cultura dos advogados.
+    - Existe uma associação entre taxa de estudantes de direito de um determinado município (por habitante) e a taxa de ações envolvendo direito do consumidor (por habitante).
+    - Proposta de criação de regra de conduta para juízes: se uma pessoa entra com processo sem ter procurado mecanismos como SAC, consumidor.gov e reclame aqui, o juíz não dá indenização por dano moral. Isso incentiva o consumidor a passar por todos os passos ao invés de ir direto ao judiciário.
+
+O quinto grupo focal contou com a presença da diretoria de contencioso cível do Grupo Pão de Açúcar.
+
+1. Sobre ações coletivas e IRDR
+    - Provavelmente não funciona pois a maioria dos processos estão nos JECs.
+1. Sobre conciliação
+    - A conciliação faz sentido e precisa ser incentivada.
+    - A taxa de aceite a proposta de acordos é maior nos JECs.
+1. Sobre incentivos para litigar
+    - Problemas de vicio de produto e entrega (logística) são as principais causas de pedir.
+    - Juízes que incentivam ações judiciais através da aplicação de valores altos de indenização.
+    - Existe banalização do dano moral.
+    - Está ligado com os problemas da gratuidade
+1. Sobre incentivos das empresas para cometerem ilícitos
+    - O problema está geralmente com as fabricantes que não tomam responsabilidade e deixam a empresa no meio de campo.
+    - As empresas enfrentam dificuldades no atendimento para devolver produtos e trocar itens com defeito.
+    - Outra fonte externa aos esforços da empresa são problemas relacionados a cartões.
+1. Sobre mecanismos de composição extrajudicial
+    - É importante incentivar o contato direto com a companhia.
+    - No entanto, os canais de atendimento atuais são ruins e não resolvem os problemas dos consumidores.
+
+### Conclusões
+
+Com as reuniões ficou claro que os eixos de investigação mais prósperos são aqueles que tratam dos litígios potenciais e não do estoque atual. Temas como IRDR, impactos do novo CPC e otimização das filas de trabalho nos tribunais apareceram com baixa frequência, enquanto incentivos para litigar ou para cometimento de ilícitos abriram amplo espaço para debate.
+
+Notamos que existe um distanciamento de opiniões entre as empresas e o tribunal. Para as empresas, o consumidor é parte do problema de um fenômeno de hiperlitigiosidade, entrando com ações em excesso por conta de incentivos de advogados ruins, de leis ou da atuação do judiciário. Para os juízes, o volume de ações é baixo frente ao volume de conflitos.
+
+Mesmo assim, foi possível identificar alguns consensos. Todos acreditam que aumentar o incentivo à conciliação dentro do processo não surte efeitos positivos. O melhor caminho é melhorar os meios de composição extrajudicial e alinhar incentivos para que os processos não cheguem ao judiciário.
