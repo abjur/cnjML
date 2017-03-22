@@ -1,0 +1,89 @@
+---
+output: 
+  bookdown::pdf_document2:
+    keep_tex: true
+---
+
+## Contatos com os tribunais
+
+Entrar em contato com as equipes de planejamento e TI dos tribunais é uma tarefa trabalhosa. A estrutura administrativa e organização dos dados varia, exigindo diferentes abordagens para contato e solicitação de dados. A experiência com projetos anteriores mostrou que persistência e flexibilidade são essenciais para obtenção das informações dentro do prazo.
+
+A estratégia para contato com os sete tribunais da pesquisa partiu de uma lista enviada pelo DPJ e combinou tentativas via e-mail e telefone. Abaixo descrevemos os passos em detalhe.
+
+1. Envio de e-mail para equipe de planejamento/estatística, apresentando o projeto e a solicitação de dados. O e-mail contém os seguintes anexos:
+    - Edital Justiça Pesquisa.
+    - Contrato da ABJ com o CNJ.
+    - Ofício com pedido de extração de dados.
+    - O Produto 1 da pesquisa.
+
+Abaixo temos o e-mail enviado para o TJSP.
+  
+> Prezados,
+> 
+> Este e-mail tem o objetivo de estabelecer um contato para a extração de dados do projeto "Maiores Litigantes em Ações Consumeristas na Justiça Estadual: Mapeamento e Proposições", fazendo parte da segunda edição do programa "Justiça Pesquisa" (Edital de Convocação 01/2015 do DPJ/CNJ, em anexo,  edital_cnj_2015.pdf).
+> 
+> A Associação Brasileira de Jurimetria (ABJ) é uma entidade sem fins lucrativos que utiliza a estatística para elucidar fenômenos do Direito. Nossas pesquisas são realizadas dentro do Laboratório de Jurimetria, composto por especialistas do direito, da computação e da estatística. A multidisciplinaridade e o rigor metodológico dos nossos estudos proporcionam maior credibilidade aos resultados obtidos. Nossos trabalhos usualmente têm como resultado a proposição de políticas públicas, reformas administrativas ou regulatórias para o aperfeiçoamento da prestação jurisdicional na sociedade.
+> 
+> Em 2016, a ABJ foi formalmente selecionada pelo Conselho Nacional de Justiça para execução do projeto: "Maiores Litigantes em Ações Consumeristas na Justiça Estadual: Mapeamento e Proposições" através do contrato de prestação de serviços anexo no arquivo Contrato_11_2016_ABJ.pdf. Nesse projeto, temos o objetivo inicial de levantar os maiores litigantes em ações consumeristas em 7 Unidades Federativas e, após isso investigar o problema de forma mais ampla, focando em alguns eixos específicos. Esses eixos estão descritos em maior detalhe no terceiro anexo deste e-mail (cnj_abj_ML_produto1_20160926.pdf), que contém o produto de pesquisa entregue ao CNJ em outubro deste ano.
+> 
+> Uma das Unidades Federativas selecionadas para o levantamento foi o estado de São Paulo e, considerando esse contexto, gostaríamos de abrir um canal de comunicação com o pessoal responsável pelas extrações de bases de dados. Para nós seria muito interessante, por exemplo, visualizar microdados dos processos distribuídos nas Varas Cíveis (e cumulativas) do TJSP, tal como descrito no rascunho de Ofício para extração dos dados (modelo_oficio_tjsp.pdf).
+> 
+> Estamos à disposição para alinhar detalhes sobre o pedido de extração de dados. Nosso objetivo é fechar um formato de extração que ao mesmo tempo atenda aos nossos pedidos e não gere um volume de trabalho excessivo para o Tribunal.
+> 
+> Cordialmente,  
+> Associação Brasileira de Jurimetria
+> 
+
+2. Confirmação de recebimento por telefone. A ligação é importante pois os e-mails dos tribunais mudam constantemente e podem ter problemas em receber mensagens com anexos.
+
+3. Após o primeiro contato, os tribunais apresentaram três reações distintas:
+    - Solicitação de encaminhamento do ofício para a presidência: TJBA, TJAM, TJSP, TJMS e TJDFT.
+    - Retorno do contato para solução alternativa: TJRJ.
+    - Contato direto com TI para extraçãodos dados: TJRS.
+
+Em seguida, encaminhamos os ofícios para a presidência de cada tribunal para validar os pedidos de extração. A partir desse ponto, cada tribunal exigiu uma abordagem.
+
+**TJRS**. O TJRS foi o tribunal mais solícito para extração dos dados. Além de responderem com rapidez e cordialidade, levantaram dúvidas pertinentes sobre o pedido.
+
+**TJSP**. O contato com o TJSP também foi satisfatório. Por conta do volume de dados foi necessário entrar em contato várias vezes para elaborar filtros adicionais e permitir a extração. O processo foi facilitado por dois motivos: a ABJ já realizou projetos com a Secretaria de Planejamento Estratégico (SEPLAN) no passado e está fisicamente próxima do tribunal.
+
+**TJRJ**. O TJRJ sugeriu uma solução alternativa para extração dos dados, a partir do envio dos dados do Justiça em Números. Após alguns contatos com o DPJ e com o tribunal, a base foi recebida com sucesso. Infelizmente o escopo da base é diferente do plano inicial e dos ofícios de extração, o que exige diferentes estratégias de análise dos dados.
+
+**TJDFT**. Os contatos com o TJDFT ainda estão em curso. Foi necessário realizar diversas ligações para encontrar um responsável. Aparentemente, estão enfrentando dificuldades em atender a solicitaçao por conta do volume de dados e da existência de mais de um sistema de gestão processual. Realizamos algumas trocas de dados preliminares para validar as extrações, mas ainda estamos aguardando a base completa.
+
+**TJMS**. O TJMS apresentou entraves burocráticos que foram resolvidos com muitas tentativas de contato. No último contato, a equipe de estatística solicitou os telefones dos outros tribunais. Abrimos um canal de transferência de dados e estamos aguardando os resultados.
+
+**TJAM**. A equipe do TJAM parece não ter estrutura para atender à solicitação. Após diversos contatos com a estatística, TI e presidência, fomos encaminhados para um contato do juiz de uma das varas cíveis de Manaus. A dificuldade do tribunal nos deixou inseguros com relação à qualidade dos dados. Por isso, decidimos adotar uma estratégia via web scraping e amostragem para obtenção dos dados.
+
+**TJBA**. As dificuldades com o TJBA começaram logo no primeiro contato. Os e-mails do tribunal estavam apresentando problemas e foi necessário enviar o ofício para o e-mail pessoal de uma funcionária. Após muita burocracia e má vontade do tribunal, concluímos que seria mais eficiente uma estratégia via web scraping e amostragem.
+
+A Tabela \@ref(tab:contatos) resume o status dos contatos e extrações de dados dos tribunais.
+
+```{r contatos, echo=FALSE}
+library(magrittr)
+tibble::tribble(
+  ~Tribunal, ~Status, ~`Base de dados`,
+  'TJAM',  'Executando', 'Estrutura do sistema e-saj.',
+  'TJBA',  'Executando', 'Estrutura do sistema e-saj.',
+  'TJDFT', 'Aguardando', 'Conforme ofício.',
+  'TJMS',  'Aguardando', 'Conforme ofício.',
+  'TJRJ',  'Finalizado', 'Escopo do Justiça em Números.',
+  'TJRS',  'Finalizado', 'Conforme ofício.',
+  'TJSP',  'Finalizado', 'Conforme ofício, com filtro adicional.'
+) %>% knitr::kable(caption = 'Resumo do status das extrações.',
+                   format = 'latex',
+                   longtable = TRUE)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
