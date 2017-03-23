@@ -4,8 +4,190 @@ output:
     keep_tex: true
 ---
 
+```{r knit, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE, 
+                      warning = FALSE, 
+                      message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(stringr)
+library(forcats)
+library(glue)
+theme_cnj <- function() {
+  theme_bw(14)
+}
+fmt <- function(n) {
+  format(n, big.mark = ',', decimal.mark = '.')
+}
+fct_lump2 <- function(f, reps) {
+  ord <- order(reps)
+  v <- rep(f, ord)
+  inds <- cumsum(ord)
+  forcats::fct_lump(v, n = 10, other_level = 'Outros')[inds]
+}
+```
+
 ## Outras bases de dados
 
-### SINDEC
+Utilizaremos bases de dados auxiliares às bases dos tribunais para investigar os eixos de composição extrajudicial e acordos. As bases estudadas até agora são abertas e disponíveis nos principais canais de transparência do Governo Federal. Para o relatório final, possivelmente analisaremos dados de canais privados, como o Reclame Aqui, utilizando técnicas de web scraping para obtenção dos dados.
+
+### Sindec
+
+A base de dados do Sindec é controlada pela SENACON e está disponível no portal de dados abertos dados.gov.br. A base de dados contém informações de todas as reclamações realizadas através do Procon. Para essa análise preliminar, consideramos a base referente ao quarto trimestre de 2016.
+
+```{r}
+# sindec <- read_csv2(
+#   'produto2/boletimsindecatendimento4otrimestre2016.csv', 
+#   col_names = FALSE,
+#   col_types = paste(rep('c', 18), collapse = "")
+# ) %>% 
+#   set_names(abjutils::rm_accent(as.character(.[1,]))) %>% 
+#   slice(-1) %>% 
+#   janitor::clean_names()
+# saveRDS(sindec, 'produto2/sindec.rds', compress = 'bzip2')
+sindec <- readRDS('sindec.rds')
+```
+
+A Tabela \@ref(tab:sindec-uf) mostra o volume de atendimentos por Unidade Federativa. São Paulo concentra mais de um terço dos atendimentos do trimestre. Rio Grande do Sul, Bahia e Distrito Federal estão praticamente empatados com 16-18 mil reclamações no trimestre.
+
+```{r sindec-uf}
+sindec %>% 
+  count(uf, sort = TRUE) %>% 
+  group_by(uf) %>% 
+  summarise(n = sum(n)) %>% 
+  arrange(n) %>% 
+  mutate(uf = fct_lump2(uf, n)) %>% 
+  group_by(uf) %>% 
+  summarise(n = sum(n)) %>% 
+  arrange(desc(n)) %>% 
+  mutate(`Proporção` = n / sum(n)) %>% 
+  janitor::add_totals_row() %>% 
+  mutate(`Proporção` = scales::percent(`Proporção`),
+         n = fmt(n)) %>% 
+  slice(c(1, 3:11, 2, 12)) %>% 
+  rename(UF = uf) %>% 
+  knitr::kable(caption = 'Quantidade de atendimentos por Unidade Federativa.',
+               booktabs = TRUE, align = c('l', 'r', 'r'))
+
+```
+
+A Tabela \@ref(tab:sindec-assunto) mostra a quantidade de atendimentos por assunto. Casos envolvendo telefonia somam mais de um quarto de todos os atendimentos.
+
+```{r sindec-assunto}
+sindec %>% 
+  count(descricaoassunto, sort = TRUE) %>% 
+  group_by(descricaoassunto) %>% 
+  summarise(n = sum(n)) %>% 
+  arrange(n) %>% 
+  mutate(descricaoassunto = fct_lump2(descricaoassunto, n)) %>% 
+  group_by(descricaoassunto) %>% 
+  summarise(n = sum(n)) %>% 
+  arrange(desc(n)) %>% 
+  mutate(`Proporção` = n / sum(n)) %>% 
+  janitor::add_totals_row() %>% 
+  mutate(`Proporção` = scales::percent(`Proporção`),
+         n = fmt(n)) %>% 
+  slice(c(2:11, 1, 12)) %>% 
+  mutate(descricaoassunto = str_trunc(descricaoassunto, 50)) %>% 
+  knitr::kable(caption = 'Quantidade de atendimentos por assunto.',
+               booktabs = TRUE, align = c('l', 'r', 'r'))
+
+```
+
+A Tabela \@ref(tab:sindec-tipo) mostra a quantidade de atendimentos por tipo. Note que as reclamações que resultam em iniciais nos JECs ocorrem em apenas 0.1% dos casos.
+
+```{r sindec-tipo}
+sindec %>% 
+  count(descricaotipoatendimento, sort = TRUE) %>% 
+  mutate(`Proporção` = n / sum(n)) %>% 
+  janitor::add_totals_row() %>% 
+  mutate(`Proporção` = scales::percent(`Proporção`),
+       n = fmt(n)) %>% 
+  rename(Tipo = descricaotipoatendimento) %>% 
+  knitr::kable(caption = 'Quantidade de atendimentos por tipo.',
+               booktabs = TRUE, align = c('l', 'r', 'r'))
+```
 
 ### Consumidor.gov
+
+A base do consumidor.gov, também controlada pela SENACON, apresenta informações de reclamações de consumidores para empresas. O sistema funciona de forma similar ao Reclame Aqui. A base de dados é rica, contendo o nome das empresas e resultados do atendimento, além de informações de faixa etária e sexo da pessoa atendida. Para essa análise preliminar, consideramos dados do segundo semestre de 2016.
+
+```{r}
+# consumidor <- read_csv2(
+#   'produto2/2_semestre_2016.csv',
+#   locale = locale(encoding = 'latin1'),
+#   col_names = FALSE,
+#   col_types = paste(rep('c', 20), collapse = "")
+# ) %>%
+#   set_names(abjutils::rm_accent(as.character(.[1,]))) %>%
+#   slice(-1) %>%
+#   janitor::clean_names()
+# saveRDS(consumidor, 'produto2/consumidor.rds', compress = 'bzip2')
+consumidor <- readRDS('consumidor.rds')
+```
+
+A Tabela \@ref(tab:consumidor-uf) mostra o volume de atendimentos por Unidade Federativa. Novamente São Paulo aparece na frente, dessa vez com pouco mais de um quarto das reclamações.
+
+```{r consumidor-uf}
+consumidor %>% 
+  count(uf, sort = TRUE) %>% 
+  group_by(uf) %>% 
+  summarise(n = sum(n)) %>% 
+  arrange(n) %>% 
+  mutate(uf = fct_lump2(uf, n)) %>% 
+  group_by(uf) %>% 
+  summarise(n = sum(n)) %>% 
+  arrange(desc(n)) %>% 
+  mutate(`Proporção` = n / sum(n)) %>% 
+  janitor::add_totals_row() %>% 
+  mutate(`Proporção` = scales::percent(`Proporção`),
+         n = fmt(n)) %>% 
+  slice(c(1, 3:11, 2, 12)) %>% 
+  rename(UF = uf) %>% 
+  knitr::kable(caption = 'Quantidade de atendimentos por Unidade Federativa.',
+               booktabs = TRUE, align = c('l', 'r', 'r'))
+
+```
+
+A Tabela \@ref(tab:consumidor-empresa) mostra a quantidade de atendimentos por assunto. Empresas de telefonia (Vivo, Oi, Tim e Claro) somam mais de um terço de todos os atendimentos.
+
+```{r consumidor-empresa}
+consumidor %>% 
+  count(nome_fantasia, sort = TRUE) %>% 
+  group_by(nome_fantasia) %>% 
+  summarise(n = sum(n)) %>% 
+  arrange(n) %>% 
+  mutate(nome_fantasia = fct_lump2(nome_fantasia, n)) %>% 
+  group_by(nome_fantasia) %>% 
+  summarise(n = sum(n)) %>% 
+  arrange(desc(n)) %>% 
+  mutate(`Proporção` = n / sum(n)) %>% 
+  janitor::add_totals_row() %>% 
+  mutate(`Proporção` = scales::percent(`Proporção`),
+         n = fmt(n)) %>% 
+  slice(c(2:11, 1, 12)) %>% 
+  mutate(nome_fantasia = str_trunc(nome_fantasia, 30)) %>% 
+  rename(Empresa = nome_fantasia) %>% 
+  knitr::kable(caption = 'Quantidade de atendimentos por empresa.',
+               booktabs = TRUE, align = c('l', 'r', 'r'))
+
+```
+
+A Tabela \@ref(tab:consumidor-assunto) mostra a quantidade de atendimentos por assunto. Problemas envolvendo cobrança envolvem 41% dos casos, enquanto entrega de produto concentra menos de 4%.
+
+```{r consumidor-tipo}
+consumidor %>% 
+  count(grupo_problema, sort = TRUE) %>% 
+  mutate(`Proporção` = n / sum(n)) %>% 
+  janitor::add_totals_row() %>% 
+  mutate(`Proporção` = scales::percent(`Proporção`),
+       n = fmt(n)) %>% 
+  rename(Assunto = grupo_problema) %>% 
+  knitr::kable(caption = 'Quantidade de atendimentos por assunto.',
+               booktabs = TRUE, align = c('l', 'r', 'r'))
+```
+
+
