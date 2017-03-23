@@ -72,7 +72,7 @@ tibble::tribble(
   'TJSP',  'Finalizado', 'Conforme ofício, com filtro adicional.'
 ) %>% knitr::kable(caption = 'Resumo do status das extrações.',
                    format = 'latex',
-                   longtable = TRUE)
+                   booktabs = TRUE)
 ```
 
 
